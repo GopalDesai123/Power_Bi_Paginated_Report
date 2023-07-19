@@ -1,0 +1,1993 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily" xmlns:am="http://schemas.microsoft.com/sqlserver/reporting/authoringmetadata">
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>5833d905-4d94-418a-a5f1-406fce5c4d9c</rd:ReportID>
+  <am:AuthoringMetadata>
+    <am:CreatedBy>
+      <am:Name>PBIRB</am:Name>
+      <am:Version>15.7.1804.21</am:Version>
+    </am:CreatedBy>
+    <am:UpdatedBy>
+      <am:Name>PBIRB</am:Name>
+      <am:Version>15.7.1805.14</am:Version>
+    </am:UpdatedBy>
+    <am:LastModifiedTimestamp>2023-07-11T06:29:08.5266218Z</am:LastModifiedTimestamp>
+  </am:AuthoringMetadata>
+  <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="MyWorkspace_AdventureWork2022PersonDetailReport">
+      <rd:SecurityType>None</rd:SecurityType>
+      <ConnectionProperties>
+        <DataProvider>PBIDATASET</DataProvider>
+        <ConnectString>Data Source=pbiazure://api.powerbi.com/;Identity Provider="https://login.microsoftonline.com/common, https://analysis.windows.net/powerbi/api, f0b72488-7082-488a-a7e8-eada97bd842d";Initial Catalog=sobe_wowvirtualserver-4f756c03-4faf-4e15-8b2f-e9e4aef7fbd9;Integrated Security=ClaimsToken</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>4195f201-868d-450d-994c-93a07b9df924</rd:DataSourceID>
+      <rd:PowerBIWorkspaceName>My Workspace</rd:PowerBIWorkspaceName>
+      <rd:PowerBIDatasetName>Adventure Work 2022 Person Detail Report</rd:PowerBIDatasetName>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>MyWorkspace_AdventureWork2022PersonDetailReport</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="HumanResoursesFullName">
+            <Value>=Parameters!HumanResoursesFullName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="HumanResoursesCountryRegionName">
+            <Value>=Parameters!HumanResoursesCountryRegionName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="HumanResoursesYear">
+            <Value>=Parameters!HumanResoursesYear.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <rd:DesignerState>
+          <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>DAX</CommandType>
+            <QuerySpecification xsi:type="MDXQuerySpecification">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Human Resourses</DimensionName>
+                      <HierarchyName>Full Name</HierarchyName>
+                      <HierarchyUniqueName>[Human Resourses].[Full Name]</HierarchyUniqueName>
+                      <LevelName>Full Name</LevelName>
+                      <UniqueName>[Human Resourses].[Full Name].[Full Name]</UniqueName>
+                    </ID>
+                    <ItemCaption>Full Name</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Human Resourses</DimensionName>
+                      <HierarchyName>JobTitle</HierarchyName>
+                      <HierarchyUniqueName>[Human Resourses].[JobTitle]</HierarchyUniqueName>
+                      <LevelName>JobTitle</LevelName>
+                      <UniqueName>[Human Resourses].[JobTitle].[JobTitle]</UniqueName>
+                    </ID>
+                    <ItemCaption>JobTitle</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Human Resourses</DimensionName>
+                      <HierarchyName>EmailAddress</HierarchyName>
+                      <HierarchyUniqueName>[Human Resourses].[EmailAddress]</HierarchyUniqueName>
+                      <LevelName>EmailAddress</LevelName>
+                      <UniqueName>[Human Resourses].[EmailAddress].[EmailAddress]</UniqueName>
+                    </ID>
+                    <ItemCaption>EmailAddress</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Human Resourses</DimensionName>
+                      <HierarchyName>PhoneNumber</HierarchyName>
+                      <HierarchyUniqueName>[Human Resourses].[PhoneNumber]</HierarchyUniqueName>
+                      <LevelName>PhoneNumber</LevelName>
+                      <UniqueName>[Human Resourses].[PhoneNumber].[PhoneNumber]</UniqueName>
+                    </ID>
+                    <ItemCaption>PhoneNumber</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Human Resourses</DimensionName>
+                      <HierarchyName>Pay Rate</HierarchyName>
+                      <HierarchyUniqueName>[Human Resourses].[Pay Rate]</HierarchyUniqueName>
+                      <LevelName>Pay Rate</LevelName>
+                      <UniqueName>[Human Resourses].[Pay Rate].[Pay Rate]</UniqueName>
+                    </ID>
+                    <ItemCaption>Pay Rate</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Human Resourses</DimensionName>
+                      <HierarchyName>CountryRegionName</HierarchyName>
+                      <HierarchyUniqueName>[Human Resourses].[CountryRegionName]</HierarchyUniqueName>
+                      <LevelName>CountryRegionName</LevelName>
+                      <UniqueName>[Human Resourses].[CountryRegionName].[CountryRegionName]</UniqueName>
+                    </ID>
+                    <ItemCaption>CountryRegionName</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Human Resourses</DimensionName>
+                      <HierarchyName>BirthDate</HierarchyName>
+                      <HierarchyUniqueName>[Human Resourses].[BirthDate]</HierarchyUniqueName>
+                      <LevelName>BirthDate</LevelName>
+                      <UniqueName>[Human Resourses].[BirthDate].[BirthDate]</UniqueName>
+                    </ID>
+                    <ItemCaption>BirthDate</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Human Resourses</DimensionName>
+                      <HierarchyName>Age</HierarchyName>
+                      <HierarchyUniqueName>[Human Resourses].[Age]</HierarchyUniqueName>
+                      <LevelName>Age</LevelName>
+                      <UniqueName>[Human Resourses].[Age].[Age]</UniqueName>
+                    </ID>
+                    <ItemCaption>Age</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Human Resourses</DimensionName>
+                      <HierarchyName>HireDate</HierarchyName>
+                      <HierarchyUniqueName>[Human Resourses].[HireDate]</HierarchyUniqueName>
+                      <LevelName>HireDate</LevelName>
+                      <UniqueName>[Human Resourses].[HireDate].[HireDate]</UniqueName>
+                    </ID>
+                    <ItemCaption>HireDate</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Human Resourses</DimensionName>
+                      <HierarchyName>Marital Status</HierarchyName>
+                      <HierarchyUniqueName>[Human Resourses].[Marital Status]</HierarchyUniqueName>
+                      <LevelName>Marital Status</LevelName>
+                      <UniqueName>[Human Resourses].[Marital Status].[Marital Status]</UniqueName>
+                    </ID>
+                    <ItemCaption>Marital Status</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Human Resourses</DimensionName>
+                      <HierarchyName>Salaried Flag</HierarchyName>
+                      <HierarchyUniqueName>[Human Resourses].[Salaried Flag]</HierarchyUniqueName>
+                      <LevelName>Salaried Flag</LevelName>
+                      <UniqueName>[Human Resourses].[Salaried Flag].[Salaried Flag]</UniqueName>
+                    </ID>
+                    <ItemCaption>Salaried Flag</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Human Resourses</DimensionName>
+                      <HierarchyName>City</HierarchyName>
+                      <HierarchyUniqueName>[Human Resourses].[City]</HierarchyUniqueName>
+                      <LevelName>City</LevelName>
+                      <UniqueName>[Human Resourses].[City].[City]</UniqueName>
+                    </ID>
+                    <ItemCaption>City</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Human Resourses</DimensionName>
+                      <HierarchyName>ShiftID</HierarchyName>
+                      <HierarchyUniqueName>[Human Resourses].[ShiftID]</HierarchyUniqueName>
+                      <LevelName>ShiftID</LevelName>
+                      <UniqueName>[Human Resourses].[ShiftID].[ShiftID]</UniqueName>
+                    </ID>
+                    <ItemCaption>ShiftID</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Human Resourses</DimensionName>
+                      <HierarchyName>SickLeaveHours</HierarchyName>
+                      <HierarchyUniqueName>[Human Resourses].[SickLeaveHours]</HierarchyUniqueName>
+                      <LevelName>SickLeaveHours</LevelName>
+                      <UniqueName>[Human Resourses].[SickLeaveHours].[SickLeaveHours]</UniqueName>
+                    </ID>
+                    <ItemCaption>SickLeaveHours</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Human Resourses</DimensionName>
+                      <HierarchyName>VacationHours</HierarchyName>
+                      <HierarchyUniqueName>[Human Resourses].[VacationHours]</HierarchyUniqueName>
+                      <LevelName>VacationHours</LevelName>
+                      <UniqueName>[Human Resourses].[VacationHours].[VacationHours]</UniqueName>
+                    </ID>
+                    <ItemCaption>VacationHours</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>Human Resourses</DimensionName>
+                      <HierarchyName>Year</HierarchyName>
+                      <HierarchyUniqueName>[Human Resourses].[Year]</HierarchyUniqueName>
+                      <LevelName>Year</LevelName>
+                      <UniqueName>[Human Resourses].[Year].[Year]</UniqueName>
+                    </ID>
+                    <ItemCaption>Year</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                </Items>
+              </Select>
+              <AutoExecute>false</AutoExecute>
+              <From>Model</From>
+              <Filter>
+                <FilterItems>
+                  <FilterItem>
+                    <HierarchyUniqueName>[Human Resourses].[Full Name]</HierarchyUniqueName>
+                    <Condition xsi:type="EqualTo">
+                      <Members />
+                      <Parametrized>true</Parametrized>
+                    </Condition>
+                  </FilterItem>
+                  <FilterItem>
+                    <HierarchyUniqueName>[Human Resourses].[CountryRegionName]</HierarchyUniqueName>
+                    <Condition xsi:type="EqualTo">
+                      <Members />
+                      <Parametrized>true</Parametrized>
+                    </Condition>
+                  </FilterItem>
+                  <FilterItem>
+                    <HierarchyUniqueName>[Human Resourses].[Year]</HierarchyUniqueName>
+                    <Condition xsi:type="EqualTo">
+                      <Members />
+                      <Parametrized>true</Parametrized>
+                    </Condition>
+                  </FilterItem>
+                </FilterItems>
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties>
+                <IncludeMemberValue>true</IncludeMemberValue>
+              </QueryProperties>
+            </QuerySpecification>
+            <Query>
+              <Statement>EVALUATE SUMMARIZECOLUMNS('Human Resourses'[Full Name], 'Human Resourses'[JobTitle], 'Human Resourses'[EmailAddress], 'Human Resourses'[PhoneNumber], 'Human Resourses'[Pay Rate], 'Human Resourses'[CountryRegionName], 'Human Resourses'[BirthDate], 'Human Resourses'[Age], 'Human Resourses'[HireDate], 'Human Resourses'[Marital Status], 'Human Resourses'[Salaried Flag], 'Human Resourses'[City], 'Human Resourses'[ShiftID], 'Human Resourses'[SickLeaveHours], 'Human Resourses'[VacationHours], 'Human Resourses'[Year], RSCustomDaxFilter(@HumanResoursesFullName,EqualToCondition,[Human Resourses].[Full Name],String), RSCustomDaxFilter(@HumanResoursesCountryRegionName,EqualToCondition,[Human Resourses].[CountryRegionName],String), RSCustomDaxFilter(@HumanResoursesYear,EqualToCondition,[Human Resourses].[Year],Int64))</Statement>
+              <ParameterDefinitions>
+                <ParameterDefinition>
+                  <Name>HumanResoursesFullName</Name>
+                  <DefaultValues />
+                  <Caption>Full Name</Caption>
+                  <HierarchyUniqueName>[Human Resourses].[Full Name]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('Human Resourses'[Full Name], "h0")), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'Human Resourses'[Full Name], "Blank()"), "ParameterValue", 'Human Resourses'[Full Name], "ParameterLevel", [ParameterLevel], "'Human Resourses'[Full Name]", 'Human Resourses'[Full Name]) order by 'Human Resourses'[Full Name], [ParameterLevel]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                  <MultipleValues>true</MultipleValues>
+                  <AllowBlank>true</AllowBlank>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>HumanResoursesCountryRegionName</Name>
+                  <DefaultValues />
+                  <Caption>CountryRegionName</Caption>
+                  <HierarchyUniqueName>[Human Resourses].[CountryRegionName]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('Human Resourses'[CountryRegionName], "h0"), RSCustomDaxFilter(@HumanResoursesFullName,EqualToCondition,[Human Resourses].[Full Name],String)), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'Human Resourses'[CountryRegionName], "Blank()"), "ParameterValue", 'Human Resourses'[CountryRegionName], "ParameterLevel", [ParameterLevel], "'Human Resourses'[CountryRegionName]", 'Human Resourses'[CountryRegionName]) order by 'Human Resourses'[CountryRegionName], [ParameterLevel]</Statement>
+                    <ParameterizedStatement>
+                      <Statement>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('Human Resourses'[CountryRegionName], "h0"), RSCustomDaxFilter(@HumanResoursesFullName,EqualToCondition,[Human Resourses].[Full Name],String)), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'Human Resourses'[CountryRegionName], "Blank()"), "ParameterValue", 'Human Resourses'[CountryRegionName], "ParameterLevel", [ParameterLevel], "'Human Resourses'[CountryRegionName]", 'Human Resourses'[CountryRegionName]) order by 'Human Resourses'[CountryRegionName], [ParameterLevel]</Statement>
+                      <ReferencedParameters>
+                        <ReferencedParameter>
+                          <Name>HumanResoursesFullName</Name>
+                        </ReferencedParameter>
+                      </ReferencedParameters>
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                  <MultipleValues>true</MultipleValues>
+                  <AllowBlank>true</AllowBlank>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>HumanResoursesYear</Name>
+                  <DbType>Int64</DbType>
+                  <DefaultValues />
+                  <Caption>Year</Caption>
+                  <HierarchyUniqueName>[Human Resourses].[Year]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('Human Resourses'[Year], "h0"), RSCustomDaxFilter(@HumanResoursesFullName,EqualToCondition,[Human Resourses].[Full Name],String), RSCustomDaxFilter(@HumanResoursesCountryRegionName,EqualToCondition,[Human Resourses].[CountryRegionName],String)), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'Human Resourses'[Year], "Blank()"), "ParameterValue", 'Human Resourses'[Year], "ParameterLevel", [ParameterLevel], "'Human Resourses'[Year]", 'Human Resourses'[Year]) order by 'Human Resourses'[Year], [ParameterLevel]</Statement>
+                    <ParameterizedStatement>
+                      <Statement>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('Human Resourses'[Year], "h0"), RSCustomDaxFilter(@HumanResoursesFullName,EqualToCondition,[Human Resourses].[Full Name],String), RSCustomDaxFilter(@HumanResoursesCountryRegionName,EqualToCondition,[Human Resourses].[CountryRegionName],String)), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'Human Resourses'[Year], "Blank()"), "ParameterValue", 'Human Resourses'[Year], "ParameterLevel", [ParameterLevel], "'Human Resourses'[Year]", 'Human Resourses'[Year]) order by 'Human Resourses'[Year], [ParameterLevel]</Statement>
+                      <ReferencedParameters>
+                        <ReferencedParameter>
+                          <Name>HumanResoursesFullName</Name>
+                        </ReferencedParameter>
+                        <ReferencedParameter>
+                          <Name>HumanResoursesCountryRegionName</Name>
+                        </ReferencedParameter>
+                      </ReferencedParameters>
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                  <MultipleValues>true</MultipleValues>
+                  <AllowBlank>true</AllowBlank>
+                </ParameterDefinition>
+              </ParameterDefinitions>
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+        <CommandText>EVALUATE SUMMARIZECOLUMNS('Human Resourses'[Full Name], 'Human Resourses'[JobTitle], 'Human Resourses'[EmailAddress], 'Human Resourses'[PhoneNumber], 'Human Resourses'[Pay Rate], 'Human Resourses'[CountryRegionName], 'Human Resourses'[BirthDate], 'Human Resourses'[Age], 'Human Resourses'[HireDate], 'Human Resourses'[Marital Status], 'Human Resourses'[Salaried Flag], 'Human Resourses'[City], 'Human Resourses'[ShiftID], 'Human Resourses'[SickLeaveHours], 'Human Resourses'[VacationHours], 'Human Resourses'[Year], RSCustomDaxFilter(@HumanResoursesFullName,EqualToCondition,[Human Resourses].[Full Name],String), RSCustomDaxFilter(@HumanResoursesCountryRegionName,EqualToCondition,[Human Resourses].[CountryRegionName],String), RSCustomDaxFilter(@HumanResoursesYear,EqualToCondition,[Human Resourses].[Year],Int64))</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Full_Name">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Human Resourses[Full Name]</DataField>
+        </Field>
+        <Field Name="JobTitle">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Human Resourses[JobTitle]</DataField>
+        </Field>
+        <Field Name="EmailAddress">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Human Resourses[EmailAddress]</DataField>
+        </Field>
+        <Field Name="PhoneNumber">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Human Resourses[PhoneNumber]</DataField>
+        </Field>
+        <Field Name="Pay_Rate">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Human Resourses[Pay Rate]</DataField>
+        </Field>
+        <Field Name="CountryRegionName">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Human Resourses[CountryRegionName]</DataField>
+        </Field>
+        <Field Name="BirthDate">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Human Resourses[BirthDate]</DataField>
+        </Field>
+        <Field Name="Age">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Human Resourses[Age]</DataField>
+        </Field>
+        <Field Name="HireDate">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Human Resourses[HireDate]</DataField>
+        </Field>
+        <Field Name="Marital_Status">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Human Resourses[Marital Status]</DataField>
+        </Field>
+        <Field Name="Salaried_Flag">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Human Resourses[Salaried Flag]</DataField>
+        </Field>
+        <Field Name="City">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Human Resourses[City]</DataField>
+        </Field>
+        <Field Name="ShiftID">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Human Resourses[ShiftID]</DataField>
+        </Field>
+        <Field Name="SickLeaveHours">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Human Resourses[SickLeaveHours]</DataField>
+        </Field>
+        <Field Name="VacationHours">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Human Resourses[VacationHours]</DataField>
+        </Field>
+        <Field Name="Year">
+          <rd:TypeName>System.String</rd:TypeName>
+          <DataField>Human Resourses[Year]</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="HumanResoursesFullName">
+      <Query>
+        <DataSourceName>MyWorkspace_AdventureWork2022PersonDetailReport</DataSourceName>
+        <rd:DesignerState>
+          <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>DAX</CommandType>
+            <Type>Query</Type>
+            <QuerySpecification xsi:type="MDXQuerySpecification">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterCaption</MeasureName>
+                      <UniqueName>[Measures].[ParameterCaption]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterCaption</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterValue</MeasureName>
+                      <UniqueName>[Measures].[ParameterValue]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterValue</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterLevel</MeasureName>
+                      <UniqueName>[Measures].[ParameterLevel]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterLevel</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                </Items>
+              </Select>
+              <AutoExecute>false</AutoExecute>
+              <From>Model</From>
+              <Filter>
+                <FilterItems />
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties />
+            </QuerySpecification>
+            <Query>
+              <Statement>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('Human Resourses'[Full Name], "h0")), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'Human Resourses'[Full Name], "Blank()"), "ParameterValue", 'Human Resourses'[Full Name], "ParameterLevel", [ParameterLevel], "'Human Resourses'[Full Name]", 'Human Resourses'[Full Name]) order by 'Human Resourses'[Full Name], [ParameterLevel]</Statement>
+              <ParameterDefinitions />
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+        <CommandText>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('Human Resourses'[Full Name], "h0")), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'Human Resourses'[Full Name], "Blank()"), "ParameterValue", 'Human Resourses'[Full Name], "ParameterLevel", [ParameterLevel], "'Human Resourses'[Full Name]", 'Human Resourses'[Full Name]) order by 'Human Resourses'[Full Name], [ParameterLevel]</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ParameterCaption">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>[ParameterCaption]</DataField>
+        </Field>
+        <Field Name="ParameterValue">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>[ParameterValue]</DataField>
+        </Field>
+        <Field Name="ParameterLevel">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>[ParameterLevel]</DataField>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <rd:TypeName>System.String</rd:TypeName>
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="HumanResoursesCountryRegionName">
+      <Query>
+        <DataSourceName>MyWorkspace_AdventureWork2022PersonDetailReport</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="HumanResoursesFullName">
+            <Value>=Parameters!HumanResoursesFullName.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <rd:DesignerState>
+          <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>DAX</CommandType>
+            <Type>Query</Type>
+            <QuerySpecification xsi:type="MDXQuerySpecification">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterCaption</MeasureName>
+                      <UniqueName>[Measures].[ParameterCaption]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterCaption</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterValue</MeasureName>
+                      <UniqueName>[Measures].[ParameterValue]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterValue</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterLevel</MeasureName>
+                      <UniqueName>[Measures].[ParameterLevel]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterLevel</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                </Items>
+              </Select>
+              <AutoExecute>false</AutoExecute>
+              <From>Model</From>
+              <Filter>
+                <FilterItems />
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties />
+            </QuerySpecification>
+            <Query>
+              <Statement>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('Human Resourses'[CountryRegionName], "h0"), RSCustomDaxFilter(@HumanResoursesFullName,EqualToCondition,[Human Resourses].[Full Name],String)), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'Human Resourses'[CountryRegionName], "Blank()"), "ParameterValue", 'Human Resourses'[CountryRegionName], "ParameterLevel", [ParameterLevel], "'Human Resourses'[CountryRegionName]", 'Human Resourses'[CountryRegionName]) order by 'Human Resourses'[CountryRegionName], [ParameterLevel]</Statement>
+              <ParameterDefinitions>
+                <ParameterDefinition>
+                  <Name>HumanResoursesFullName</Name>
+                  <DefaultValues />
+                  <Caption>Full Name</Caption>
+                  <HierarchyUniqueName>[Human Resourses].[Full Name]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('Human Resourses'[Full Name], "h0")), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'Human Resourses'[Full Name], "Blank()"), "ParameterValue", 'Human Resourses'[Full Name], "ParameterLevel", [ParameterLevel], "'Human Resourses'[Full Name]", 'Human Resourses'[Full Name]) order by 'Human Resourses'[Full Name], [ParameterLevel]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                  <MultipleValues>true</MultipleValues>
+                  <AllowBlank>true</AllowBlank>
+                </ParameterDefinition>
+              </ParameterDefinitions>
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+        <CommandText>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('Human Resourses'[CountryRegionName], "h0"), RSCustomDaxFilter(@HumanResoursesFullName,EqualToCondition,[Human Resourses].[Full Name],String)), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'Human Resourses'[CountryRegionName], "Blank()"), "ParameterValue", 'Human Resourses'[CountryRegionName], "ParameterLevel", [ParameterLevel], "'Human Resourses'[CountryRegionName]", 'Human Resourses'[CountryRegionName]) order by 'Human Resourses'[CountryRegionName], [ParameterLevel]</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ParameterCaption">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>[ParameterCaption]</DataField>
+        </Field>
+        <Field Name="ParameterValue">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>[ParameterValue]</DataField>
+        </Field>
+        <Field Name="ParameterLevel">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>[ParameterLevel]</DataField>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <rd:TypeName>System.String</rd:TypeName>
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="HumanResoursesYear">
+      <Query>
+        <DataSourceName>MyWorkspace_AdventureWork2022PersonDetailReport</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="HumanResoursesFullName">
+            <Value>=Parameters!HumanResoursesFullName.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="HumanResoursesCountryRegionName">
+            <Value>=Parameters!HumanResoursesCountryRegionName.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <rd:DesignerState>
+          <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>DAX</CommandType>
+            <Type>Query</Type>
+            <QuerySpecification xsi:type="MDXQuerySpecification">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterCaption</MeasureName>
+                      <UniqueName>[Measures].[ParameterCaption]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterCaption</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterValue</MeasureName>
+                      <UniqueName>[Measures].[ParameterValue]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterValue</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>ParameterLevel</MeasureName>
+                      <UniqueName>[Measures].[ParameterLevel]</UniqueName>
+                    </ID>
+                    <ItemCaption>ParameterLevel</ItemCaption>
+                    <FormattedValue>true</FormattedValue>
+                  </Item>
+                </Items>
+              </Select>
+              <AutoExecute>false</AutoExecute>
+              <From>Model</From>
+              <Filter>
+                <FilterItems />
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties />
+            </QuerySpecification>
+            <Query>
+              <Statement>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('Human Resourses'[Year], "h0"), RSCustomDaxFilter(@HumanResoursesFullName,EqualToCondition,[Human Resourses].[Full Name],String), RSCustomDaxFilter(@HumanResoursesCountryRegionName,EqualToCondition,[Human Resourses].[CountryRegionName],String)), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'Human Resourses'[Year], "Blank()"), "ParameterValue", 'Human Resourses'[Year], "ParameterLevel", [ParameterLevel], "'Human Resourses'[Year]", 'Human Resourses'[Year]) order by 'Human Resourses'[Year], [ParameterLevel]</Statement>
+              <ParameterDefinitions>
+                <ParameterDefinition>
+                  <Name>HumanResoursesFullName</Name>
+                  <DefaultValues />
+                  <Caption>Full Name</Caption>
+                  <HierarchyUniqueName>[Human Resourses].[Full Name]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('Human Resourses'[Full Name], "h0")), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'Human Resourses'[Full Name], "Blank()"), "ParameterValue", 'Human Resourses'[Full Name], "ParameterLevel", [ParameterLevel], "'Human Resourses'[Full Name]", 'Human Resourses'[Full Name]) order by 'Human Resourses'[Full Name], [ParameterLevel]</Statement>
+                    <ParameterizedStatement>
+                      <ReferencedParameters />
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                  <MultipleValues>true</MultipleValues>
+                  <AllowBlank>true</AllowBlank>
+                </ParameterDefinition>
+                <ParameterDefinition>
+                  <Name>HumanResoursesCountryRegionName</Name>
+                  <DefaultValues />
+                  <Caption>CountryRegionName</Caption>
+                  <HierarchyUniqueName>[Human Resourses].[CountryRegionName]</HierarchyUniqueName>
+                  <ParameterValuesQuery>
+                    <Statement>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('Human Resourses'[CountryRegionName], "h0"), RSCustomDaxFilter(@HumanResoursesFullName,EqualToCondition,[Human Resourses].[Full Name],String)), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'Human Resourses'[CountryRegionName], "Blank()"), "ParameterValue", 'Human Resourses'[CountryRegionName], "ParameterLevel", [ParameterLevel], "'Human Resourses'[CountryRegionName]", 'Human Resourses'[CountryRegionName]) order by 'Human Resourses'[CountryRegionName], [ParameterLevel]</Statement>
+                    <ParameterizedStatement>
+                      <Statement>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('Human Resourses'[CountryRegionName], "h0"), RSCustomDaxFilter(@HumanResoursesFullName,EqualToCondition,[Human Resourses].[Full Name],String)), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'Human Resourses'[CountryRegionName], "Blank()"), "ParameterValue", 'Human Resourses'[CountryRegionName], "ParameterLevel", [ParameterLevel], "'Human Resourses'[CountryRegionName]", 'Human Resourses'[CountryRegionName]) order by 'Human Resourses'[CountryRegionName], [ParameterLevel]</Statement>
+                      <ReferencedParameters>
+                        <ReferencedParameter>
+                          <Name>HumanResoursesFullName</Name>
+                        </ReferencedParameter>
+                      </ReferencedParameters>
+                    </ParameterizedStatement>
+                  </ParameterValuesQuery>
+                  <MultipleValues>true</MultipleValues>
+                  <AllowBlank>true</AllowBlank>
+                </ParameterDefinition>
+              </ParameterDefinitions>
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+        <rd:AutoGenerated>true</rd:AutoGenerated>
+        <rd:Hidden>true</rd:Hidden>
+        <CommandText>EVALUATE SELECTCOLUMNS (ADDCOLUMNS (SUMMARIZECOLUMNS (ROLLUPADDISSUBTOTAL ('Human Resourses'[Year], "h0"), RSCustomDaxFilter(@HumanResoursesFullName,EqualToCondition,[Human Resourses].[Full Name],String), RSCustomDaxFilter(@HumanResoursesCountryRegionName,EqualToCondition,[Human Resourses].[CountryRegionName],String)), "ParameterLevel", if ([h0], 0, 1)), "ParameterCaption", SWITCH([ParameterLevel], 1, 'Human Resourses'[Year], "Blank()"), "ParameterValue", 'Human Resourses'[Year], "ParameterLevel", [ParameterLevel], "'Human Resourses'[Year]", 'Human Resourses'[Year]) order by 'Human Resourses'[Year], [ParameterLevel]</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ParameterCaption">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>[ParameterCaption]</DataField>
+        </Field>
+        <Field Name="ParameterValue">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>[ParameterValue]</DataField>
+        </Field>
+        <Field Name="ParameterLevel">
+          <rd:TypeName>System.Int32</rd:TypeName>
+          <DataField>[ParameterLevel]</DataField>
+        </Field>
+        <Field Name="ParameterCaptionIndented">
+          <rd:TypeName>System.String</rd:TypeName>
+          <Value>=Space(3*Fields!ParameterLevel.Value) + Fields!ParameterCaption.Value</Value>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="Tablix1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>3.68305in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>1.40625in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Rectangle Name="Rectangle1">
+                          <ReportItems>
+                            <Textbox Name="Full_Name">
+                              <rd:DefaultName>Full_Name</rd:DefaultName>
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Name</Value>
+                                      <Style>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>             : </Value>
+                                      <Style />
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>=Fields!Full_Name.Value</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <Height>0.25in</Height>
+                              <Width>3.68305in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="EmailAddress">
+                              <rd:DefaultName>EmailAddress</rd:DefaultName>
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Email Address</Value>
+                                      <Style>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value> : </Value>
+                                      <Style />
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>=Fields!EmailAddress.Value</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.56944in</Top>
+                              <Height>0.25in</Height>
+                              <Width>3.68305in</Width>
+                              <ZIndex>1</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="CountryRegionName">
+                              <rd:DefaultName>CountryRegionName</rd:DefaultName>
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Country  </Value>
+                                      <Style>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>         : </Value>
+                                      <Style />
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>=Fields!CountryRegionName.Value</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.86111in</Top>
+                              <Height>0.25in</Height>
+                              <Width>3.68305in</Width>
+                              <ZIndex>2</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="PhoneNumber">
+                              <rd:DefaultName>PhoneNumber</rd:DefaultName>
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Phone No.</Value>
+                                      <Style>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>       : </Value>
+                                      <Style />
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>=Fields!PhoneNumber.Value</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>1.125in</Top>
+                              <Height>0.25in</Height>
+                              <Width>3.68305in</Width>
+                              <ZIndex>3</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="HireDate">
+                              <rd:DefaultName>HireDate</rd:DefaultName>
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Hire Date </Value>
+                                      <Style>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>       : </Value>
+                                      <Style />
+                                    </TextRun>
+                                    <TextRun>
+                                      <Value>=Fields!HireDate.Value</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.27778in</Top>
+                              <Height>0.25in</Height>
+                              <Width>3.68305in</Width>
+                              <ZIndex>4</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                          </ReportItems>
+                          <KeepTogether>true</KeepTogether>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Rectangle>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Details" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>DataSet1</DataSetName>
+            <Filters>
+              <Filter>
+                <FilterExpression>=Fields!Full_Name.Value</FilterExpression>
+                <Operator>Equal</Operator>
+                <FilterValues>
+                  <FilterValue>=Parameters!HumanResoursesFullName.Value(0)</FilterValue>
+                </FilterValues>
+              </Filter>
+            </Filters>
+            <Top>0.31944in</Top>
+            <Left>1.59599in</Left>
+            <Height>1.40625in</Height>
+            <Width>3.68305in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Image Name="Image1">
+            <Source>Embedded</Source>
+            <Value>salesperson</Value>
+            <Sizing>FitProportional</Sizing>
+            <Top>0.29167in</Top>
+            <Left>0.07863in</Left>
+            <Height>1.45361in</Height>
+            <Width>1.48958in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Image>
+          <Line Name="Line2">
+            <Top>1.92583in</Top>
+            <Left>0.02084in</Left>
+            <Height>0in</Height>
+            <Width>6.45958in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Tablix Name="Tablix2">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>1.28704in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.86863in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.91292in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.49488in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.76389in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.67641in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.84981in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.61766in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.3125in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox1">
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Job Title</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>2pt</Width>
+                            </BottomBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox10">
+                          <rd:DefaultName>Textbox10</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>City</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>2pt</Width>
+                            </BottomBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox9">
+                          <rd:DefaultName>Textbox9</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Birth Date</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>2pt</Width>
+                            </BottomBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox3">
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Age</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>2pt</Width>
+                            </BottomBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox6">
+                          <rd:DefaultName>Textbox6</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Marital Status</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>2pt</Width>
+                            </BottomBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox8">
+                          <rd:DefaultName>Textbox8</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Vacation Hours</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>2pt</Width>
+                            </BottomBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox12">
+                          <rd:DefaultName>Textbox12</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Sick Leave Hours</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>2pt</Width>
+                            </BottomBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox5">
+                          <rd:DefaultName>Textbox5</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Pay Rate</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>2pt</Width>
+                            </BottomBorder>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.375in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="JobTitle">
+                          <rd:DefaultName>JobTitle</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!JobTitle.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="City">
+                          <rd:DefaultName>City</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!City.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="BirthDate">
+                          <rd:DefaultName>BirthDate</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!BirthDate.Value</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Age">
+                          <rd:DefaultName>Age</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Age.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Marital_Status">
+                          <rd:DefaultName>Marital_Status</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Marital_Status.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="VacationHours">
+                          <rd:DefaultName>VacationHours</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!VacationHours.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="SickLeaveHours">
+                          <rd:DefaultName>SickLeaveHours</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!SickLeaveHours.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Pay_Rate">
+                          <rd:DefaultName>Pay_Rate</rd:DefaultName>
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=SUM(Fields!Pay_Rate.Value)</Value>
+                                  <Style>
+                                    <Format>C1</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Details1" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>DataSet1</DataSetName>
+            <Filters>
+              <Filter>
+                <FilterExpression>=Fields!Full_Name.Value</FilterExpression>
+                <Operator>Equal</Operator>
+                <FilterValues>
+                  <FilterValue>=Parameters!HumanResoursesFullName.Value(0)</FilterValue>
+                </FilterValues>
+              </Filter>
+            </Filters>
+            <Top>1.99527in</Top>
+            <Left>0.02084in</Left>
+            <Height>0.68751in</Height>
+            <Width>6.47125in</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+          <Textbox Name="HumanResoursesFullName">
+            <rd:DefaultName>HumanResoursesFullName</rd:DefaultName>
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!HumanResoursesFullName.Value(0)</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.05556in</Top>
+            <Left>0.07863in</Left>
+            <Height>0.25in</Height>
+            <Width>1.88541in</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <Height>2.79736in</Height>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Body>
+      <Width>6.69917in</Width>
+      <Page>
+        <PageHeader>
+          <Height>1.03695in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Image Name="Image2">
+              <Source>Embedded</Source>
+              <Value>adventureworkslogo150x150</Value>
+              <Sizing>FitProportional</Sizing>
+              <Top>0.04042in</Top>
+              <Left>5.66735in</Left>
+              <Height>0.88889in</Height>
+              <Width>0.81308in</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+              </Style>
+            </Image>
+            <Line Name="Line1">
+              <Top>0.99876in</Top>
+              <Height>0in</Height>
+              <Width>6.69917in</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>Solid</Style>
+                </Border>
+              </Style>
+            </Line>
+            <Textbox Name="Textbox7">
+              <rd:DefaultName>Textbox7</rd:DefaultName>
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Person Detail Report</Value>
+                      <Style>
+                        <FontSize>22pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                        <Color>Green</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.06473in</Top>
+              <Left>0.06473in</Left>
+              <Height>0.54167in</Height>
+              <Width>3.3125in</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+            <Textbox Name="Textbox14">
+              <rd:DefaultName>Textbox14</rd:DefaultName>
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Country :</Value>
+                      <Style>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value xml:space="preserve"> </Value>
+                      <Style />
+                    </TextRun>
+                    <TextRun>
+                      <Value>=Parameters!HumanResoursesCountryRegionName.Value(0)</Value>
+                      <Style />
+                    </TextRun>
+                    <TextRun>
+                      <Value> | </Value>
+                      <Style>
+                        <FontSize>12pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value>Year : </Value>
+                      <Style>
+                        <FontWeight>Bold</FontWeight>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value>=Parameters!HumanResoursesYear.Value(0)</Value>
+                      <Style>
+                        <FontWeight>Normal</FontWeight>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style />
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.6064in</Top>
+              <Left>0.06473in</Left>
+              <Height>0.32291in</Height>
+              <Width>5.53317in</Width>
+              <ZIndex>3</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageHeader>
+        <PageFooter>
+          <Height>0.53333in</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="ExecutionTime">
+              <rd:DefaultName>ExecutionTime</rd:DefaultName>
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Globals!ExecutionTime</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.2in</Top>
+              <Left>4.49209in</Left>
+              <Height>0.25in</Height>
+              <Width>2in</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageFooter>
+        <LeftMargin>1in</LeftMargin>
+        <RightMargin>1in</RightMargin>
+        <TopMargin>1in</TopMargin>
+        <BottomMargin>1in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="HumanResoursesFullName">
+      <DataType>String</DataType>
+      <Prompt>Full Name</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>HumanResoursesFullName</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+      <cl:ComponentMetadata>
+        <cl:HideUpdateNotifications>true</cl:HideUpdateNotifications>
+      </cl:ComponentMetadata>
+    </ReportParameter>
+    <ReportParameter Name="HumanResoursesCountryRegionName">
+      <DataType>String</DataType>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>CountryRegionName</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>HumanResoursesCountryRegionName</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="HumanResoursesYear">
+      <DataType>Integer</DataType>
+      <Prompt>Year</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>HumanResoursesYear</DataSetName>
+          <ValueField>ParameterValue</ValueField>
+          <LabelField>ParameterCaptionIndented</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+  </ReportParameters>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>HumanResoursesFullName</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>HumanResoursesCountryRegionName</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>HumanResoursesYear</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <EmbeddedImages>
+    <EmbeddedImage Name="salesperson">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>/9j/4AAQSkZJRgABAQEBLAEsAAD/4QCoRXhpZgAASUkqAAgAAAABAA4BAgCGAAAAGgAAAAAAAABCdXNpbmVzcyBjaGFyYWN0ZXJzIHRlYW0gd29yay4gT2ZmaWNlIHBlb3BsZSBjb3Jwb3JhdGUgZW1wbG95ZWUgY2FydG9vbiB0ZWFtd29yayBjb21tdW5pY2F0aW9uLiBGbGF0IGJ1c2luZXNzIHRlYW0gdmVjdG9yIGlsbHVzdHJhdGlvbv/hBapodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iPgoJPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KCQk8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iIHhtbG5zOklwdGM0eG1wQ29yZT0iaHR0cDovL2lwdGMub3JnL3N0ZC9JcHRjNHhtcENvcmUvMS4wL3htbG5zLyIgICB4bWxuczpHZXR0eUltYWdlc0dJRlQ9Imh0dHA6Ly94bXAuZ2V0dHlpbWFnZXMuY29tL2dpZnQvMS4wLyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpwbHVzPSJodHRwOi8vbnMudXNlcGx1cy5vcmcvbGRmL3htcC8xLjAvIiAgeG1sbnM6aXB0Y0V4dD0iaHR0cDovL2lwdGMub3JnL3N0ZC9JcHRjNHhtcEV4dC8yMDA4LTAyLTI5LyIgeG1s
+bnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyIgcGhvdG9zaG9wOkNyZWRpdD0iR2V0dHkgSW1hZ2VzL2lTdG9ja3Bob3RvIiBHZXR0eUltYWdlc0dJRlQ6QXNzZXRJRD0iMTE0NDE4NTE4NyIgeG1wUmlnaHRzOldlYlN0YXRlbWVudD0iaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL2xlZ2FsL2xpY2Vuc2UtYWdyZWVtZW50P3V0bV9tZWRpdW09b3JnYW5pYyZhbXA7dXRtX3NvdXJjZT1nb29nbGUmYW1wO3V0bV9jYW1wYWlnbj1pcHRjdXJsIiA+CjxkYzpjcmVhdG9yPjxyZGY6U2VxPjxyZGY6bGk+U3BpY3lUcnVmZmVsPC9yZGY6bGk+PC9yZGY6U2VxPjwvZGM6Y3JlYXRvcj48ZGM6ZGVzY3JpcHRpb24+PHJkZjpBbHQ+PHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ij5CdXNpbmVzcyBjaGFyYWN0ZXJzIHRlYW0gd29yay4gT2ZmaWNlIHBlb3BsZSBjb3Jwb3JhdGUgZW1wbG95ZWUgY2FydG9vbiB0ZWFtd29yayBjb21tdW5pY2F0aW9uLiBGbGF0IGJ1c2luZXNzIHRlYW0gdmVjdG9yIGlsbHVzdHJhdGlvbjwvcmRmOmxpPjwvcmRmOkFsdD48L2RjOmRlc2NyaXB0aW9uPgo8cGx1czpMaWNlbnNvcj48cmRmOlNlcT48cmRmOmxpIHJkZjpwYXJzZVR5cGU9J1Jlc291cmNlJz48cGx1czpMaWNlbnNvclVSTD5odHRwczovL3d3dy5pc3RvY2twaG90by5jb20vcGhvdG8vbGljZW5zZS1nbTExNDQxODUxODctP3V0bV9tZWRpdW09b3JnYW5pYyZhbXA7dXRtX3NvdXJjZT1nb29nbGUmYW1w
+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</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="adventureworkslogo150x150">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+</Report>
